@@ -1,12 +1,12 @@
-# import logging
-# import json
-# from flask import request, jsonify
-# from codeitsuisse import app
+import logging
+import json
+from flask import request, jsonify
+from codeitsuisse import app
 
-# logger = logging.getLogger(__name__)
+logger = logging.getLogger(__name__)
 
-# @app.route('/fruitbasket', methods=['POST'])
-# def getdummy():
-#     data = request.get_json();
-#     result = 276
-#     return result
+@app.route('/fruitbasket', methods=['POST'])
+def getdummy():
+    data = request.get_json()
+    result = 276
+    return result
