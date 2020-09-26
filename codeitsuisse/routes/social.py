@@ -28,6 +28,5 @@ def get_answer():
         else:
             num = nCr(ppl+spare_seats, ppl)
         # ls, num = get_plan(seats,ppl,space)
-
         ans[key] = num
-    return jsonify({"answer":ans})
+    return jsonify({"answers":ans})
