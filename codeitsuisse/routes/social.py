@@ -30,4 +30,4 @@ def get_answer():
         # ls, num = get_plan(seats,ppl,space)
 
         ans[key] = num
-    return json.dumps({"answer":ans})
+    return jsonify({"answer":ans})
