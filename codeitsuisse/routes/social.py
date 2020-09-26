@@ -49,11 +49,11 @@ def get_answer():
     inpu = request.get_json()
     tests = inpu.get("tests")
     ans = {}
-    for testnum in range(len(tests)):
-        test = tests.get(str(testnum))
+    for key, value in tests.items():
+        test = value
         seats = test.get("seats")
         ppl = test.get("people")
         space = test.get("spaces")
         ls, num = get_plan(seats,ppl,space)
-        ans[str(testnum)] = num
+        ans[key] = num
     return jsonify({"answers":ans})
