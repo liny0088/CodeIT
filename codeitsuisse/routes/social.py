@@ -56,4 +56,4 @@ def get_answer():
         space = test.get("spaces")
         ls, num = get_plan(seats,ppl,space)
         ans[str(testnum)] = num
-    return json.dumps({"answers":ans})
+    return jsonify({"answers":ans})
