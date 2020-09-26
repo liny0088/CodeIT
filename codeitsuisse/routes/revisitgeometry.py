@@ -59,4 +59,4 @@ def get_intercepts():
         coords = pair.coords[0]
         result.append({"x": round(coords[0], 2), 'y': round(coords[1], 2)})
     print(result)
-    return json.dumps(result)
+    return jsonify(result)

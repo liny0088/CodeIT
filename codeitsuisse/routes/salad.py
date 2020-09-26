@@ -31,4 +31,4 @@ def find_lowest_cost():
     else:
         ans = min(possible_cost)
 
-    return json.dumps({"result": ans })
+    return jsonify({"result": ans })
