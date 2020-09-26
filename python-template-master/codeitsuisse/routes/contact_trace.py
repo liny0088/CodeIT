@@ -1,15 +1,15 @@
 import logging
 import json
 
-from flask import request, jsonify
+from flask import request, jsonify;
 
-from codeitsuisse import app
+from codeitsuisse import app;
 
 logger = logging.getLogger(__name__)
 
 @app.route('/contact_trace', methods=['POST'])
 def contact_trace():
-    data = request.get_json()
+    data = request.get_json();
     def compareString(String1, String2):
         # return number of alteration and isNonSalient point
         # String1->String2,,,,, String1 is infected by String 2
@@ -79,6 +79,6 @@ def contact_trace():
                 else:
                     result.append(data.get("infected").get("name") + " -> " + data.get("origin").get("name"))
             # check if the guy in cluster is also connected to the origin if it is origin ->clutser-infected, then only this,
-    return json.dumps(result)
+    return json.dump(result)
 
 
