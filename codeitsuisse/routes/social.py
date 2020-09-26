@@ -30,7 +30,9 @@ def get_answer():
         answer_list = []
         space_before_person = [0]
         if ppl==1:
-            return seats
+            return [], seats
+        elif space*(ppl-1)+ppl > seats:
+            return [], 0    
 
         for i in range(ppl-1):
             space_before_person.append(space)
