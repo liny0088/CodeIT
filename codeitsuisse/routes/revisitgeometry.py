@@ -56,7 +56,13 @@ def get_intercepts():
 
     result = []
     for pair in point_list:
-        coords = pair.coords[0]
+        try:
+            coords = pair.coords[0]
+        except:
+            xy = ring.intersection(extended_line).coords.xy
+            result.append({"x":round(xy[0][0],2), 'y':round(xy[1][0],2)})
+            print("1 point")
+            break
         result.append({"x": round(coords[0], 2), 'y': round(coords[1], 2)})
     print(result)
     return jsonify(result)
