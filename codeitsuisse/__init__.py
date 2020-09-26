@@ -5,6 +5,8 @@ app = Flask(__name__)
 import codeitsuisse.routes.revisitgeometry
 import codeitsuisse.routes.dummy
 #import codeitsuisse.routes.salad
+import codeitsuisse.routes.social
+
 
 
 
