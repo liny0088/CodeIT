@@ -6,6 +6,8 @@ from flask import request, jsonify
 from codeitsuisse import app
 import numpy as np
 import shapely
+import shapely.geometry
+
 
 logger = logging.getLogger(__name__)
 
