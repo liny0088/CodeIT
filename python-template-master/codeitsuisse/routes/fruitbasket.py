@@ -7,5 +7,6 @@ logger = logging.getLogger(__name__)
 
 @app.route('/fruitbasket', methods=['POST'])
 def getdummy():
+    geo = request.get_json()
     result = 287
     return result
