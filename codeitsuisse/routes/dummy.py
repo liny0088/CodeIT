@@ -8,5 +8,5 @@ logger = logging.getLogger(__name__)
 @app.route('/fruitbasket', methods=['POST'])
 def getdummy():
     data = request.get_json()
-    result = 9750
+    result = 15200
     return jsonify(result)
